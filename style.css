@@ -1,63 +1,184 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
-/* font-family: 'Roboto', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+/* font-family: 'Lato', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+/* font-family: 'Kanit', sans-serif; */
 
+
+/* Universal selector */
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
 }
+
+/* Header */
 
 .topContainer {
     width: 100%;
     height: 100vh;
-    background: aliceblue;
 }
 
-.topContainer .logoContainer {
+.topContainer .lowerContainer {
+    position: absolute;
+    z-index: 0;
     width: 100%;
-    height: 50%;
+    height: 100vh;
+    background: url(./img/brand/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topContainer .upperContainer {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.356);
+    z-index: 1;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.topContainer .logoContainer img {
-    width: 250px;
-    height: 200px;
-    border-radius: 5px;
-    border: 2px solid white;
+.upperContainer .leftContainer {
+    padding: 3px;
+    margin: 5px;
+    margin-top: 100px;
 }
 
-.topContainer .bottomContainer {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.bottomContainer .headingContainer {
-    padding: 10px;
+.leftContainer .logoContainer {
+    padding: 3px;
     margin: 4px;
 }
 
-.headingContainer h4 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.58em;
-    text-decoration: underline;
-}
-
-.bottomContainer .subHeadingContainer {
-    padding: 5px;
+.logoContainer img {
+    width: auto;
+    height: auto;
     margin: 2px;
-    text-align: center;
+    border-radius: 3px;
 }
 
-.subHeadingContainer h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 5em;
-    text-transform: uppercase;
+.upperContainer .rightContainer {
+    padding: 10px;
+    margin: 2px;
+    margin-top: -100px;
+}
+
+.rightContainer .btnContainer {
+    margin: 2px;
+    padding: 4px 5px;
+}
+
+.btnContainer button {
+    padding: 5px 6px;
+    margin: 0 7px;
+    font-size: 1.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+    border: 5px solid black;
+    border-radius: 5px;
+    text-shadow: 0 0 3px black;
+    box-shadow: 0 0 5px black;
+    transform: all 0.35s;
+}
+
+.topBtn {
+    background-color: transparent;
+    color: black;
+}
+
+.topdiffBtn {
+    background-color: black;
+    color: whitesmoke;
+}
+
+/* Main */
+
+.mainSection {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Footer */
+
+.footerSection {
+    width: 100%;
+    background-color: rgba(123, 114, 100, 0.808);
+}
+
+.footerSection .footertopContainer {
+    background-color: rgba(83, 77, 77, 0.593);
+    padding: 4px;
+}
+
+.footertopContainer .footerheadingCont {
+    padding: 3px;
+    margin: 3px;
+}
+
+.footerheadingCont img {
+    width: auto;
+    height: 50px;
+}
+
+.footerbottomContainer {
+    padding: 4px;
+}
+
+.footerbottomContainer .footercontentCont {
+    padding: 4px;
+    margin: 1px;
+}
+
+.footercontentCont .footerheadings {
+    padding: 2px;
+    margin: 1px 2px;
+}
+
+.footerheadings h2 {
+    text-decoration: underline;
+    font-size: 1.3em;
+    font-family: 'Lato', sans-serif;
+    margin: 0.4px;
+}
+
+.footerheadings p {
+    font-size: 0.89em;
+    padding: 5px;
+    margin: 0 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footerheadings .footerlinkContainer {
+    padding: 5px;
+    margin: 0 3px;
+    display: flex;
+    flex-direction: row;
+}
+
+.footerlinkContainer .footerlinks {
+    padding: 4px;
+    margin: 1px;
+}
+
+.footerlinks img {
+    cursor: pointer;
+}
+
+.footerheadings .footerdatas {
+    padding: 3px;
+    margin: 5px;
+}
+
+.footerdatas h6 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 0.99em;
+    text-transform: none;
+    color: black;
 }
