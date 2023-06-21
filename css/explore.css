@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+/* font-family: 'Tilt Prism', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap');
+/* font-family: 'Saira Condensed', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Offside&display=swap');
+/* font-family: 'Offside', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+/* font-family: 'Bagel Fat One', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    scroll-behavior: smooth;
+}
+
+.dealsDiv {
+    width: 100%;
+    padding: 5px;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+}
+
+.dealsContainer {
+    background-color: orange;
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.dealsContainer:hover {
+    box-shadow: 0 0 8px gray;
+}
+
+.dealsContainer .leftCont {
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leftCont .imgCont {
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgCont img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.dealsContainer .rightCont {
+    width: 400px;
+}
+
+.rightCont .headingCont {
+    padding: 5px;
+    margin: 1px;
+}
+
+.headingCont h1 {
+    font-size: 1.6em;
+    text-transform: capitalize;
+    font-family: 'Offside', cursive;
+    color: black;
+}
+
+.rightCont .descCont {
+    padding: 5px;
+    margin: 1px;
+}
+
+.descCont p {
+    font-size: 0.99em;
+    text-transform: none;
+    font-family: 'Saira Condensed', sans-serif;
+    color: black;
+}
+
+.rightCont .catchyDesc {
+    padding: 1px;
+    margin: 1px;
+}
+
+.catchyDesc span {
+    font-family: 'Bagel Fat One', cursive;
+    font-weight: 900;
+    font-size: 1.2em;
+    transition: all 0.25s;
+}
+
+.catchyDesc span:hover {
+    font-size: 1.3em;
+}
+
+.optionsDiv {
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(244, 255, 127, 0.518);
+}
+
+.optionsDiv .headingContainer {
+    padding: 1px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.headingContainer h2 {
+    font-size: 2.1em;
+    font-family: 'Raleway', sans-serif;
+    text-transform: none;
+    color: black;
+}
+
+.optionsDiv .searchContainer {
+    padding: 5px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchContainer input[type="search"] {
+    border: 2px solid black;
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 5px;
+    color: black;
+    font-size: 1.2em;
+}
+
+.searchContainer input[type="submit"] {
+    padding: 5px 8px;
+    margin: 1px;
+    color: black;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    text-transform: lowercase;
+    font-size: 1.1em;
+}
+
+.foodDiv {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 384px));
+}
+
+.cardContainer {
+    padding: 20px;
+    width: fit-content;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+
+.cardinnerContainer {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid gray;
+    transition: all 0.35s;
+}
+
+.cardinnerContainer:hover {
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.cardImgCont {
+    width: fit-content;
+    height: auto;
+}
+
+.cardImgCont img {
+    width: 300px;
+    height: 300px;
+}
+
+.cardNameCont {
+    padding: 5px;
+    margin: 2px;
+}
+
+.cardNameCont h2 {
+    font-size: 1em;
+    color: black;
+    text-transform: capitalize;
+    font-family: 'Tilt Prism', cursive;
+    transition: all 0.25s;
+}
+
+.cardinnerContainer:hover .cardNameCont h2 {
+    font-size: 1.8em;
+}
+
+@media (max-width: 540px) {
+    .dealsContainer .rightCont {
+        width: 250px;
+    }
+    
+    .optionsDiv {
+        flex-direction: column;
+    }
+}
