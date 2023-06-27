@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/payment/payment.ico" type="image/x-icon">
+    <title>Payment</title>
+    <link rel="stylesheet" href="/css/payment.css">
+</head>
+
+<body>
+    <div class="paymentContainer">
+        <div class="paymentHeading">
+            <h1>Payment</h1>
+            <% if (user_obj.loggedIn) { %>
+                <div class="userDataCont">
+                    <h2>
+                        <%= user_obj.name %>
+                    </h2>
+                    <p>
+                        <%= user_obj.email %>
+                    </p>
+                    <p>
+                        <%= user_obj.phoneNum %>
+                    </p>
+                    <a href="/logout">Logout</a>
+                </div>
+                <% } %>
+        </div>
+        <div class="makePaymentContainer">
+            <div>
+                <h3 class="name_heading">Food Name: </h3>
+                <span class="span">
+                    <%=paymentObj.name%>
+                </span>
+            </div>
+            <div>
+                <h3 class="name_heading">Food Description: </h3>
+                <span class="span">
+                    <%=paymentObj.desc%>
+                </span>
+            </div>
+            <div>
+                <h3 class="name_heading">Food Price: </h3>
+                <span class="span">$<%=paymentObj.price%></span>
+            </div>
+            <% if (user_obj.loggedIn) { %>
+                <form action="/makePayment" method="post" id="makePaymentForm">
+                    <div>
+                        <h3 class="name_heading">Location:</h3>
+                        <div class="locationFieldsCont">
+                            <input type="text" name="city" id="city" placeholder="city" autocomplete="off">
+                            <input type="text" name="state" id="state" placeholder="state" autocomplete="off">
+                            <input type="text" name="country" id="country" placeholder="country" autocomplete="off">
+                            <input type="text" name="addr" id="addr" placeholder="address" autocomplete="off">
+                            <input type="text" name="postal_code" id="postal_code" placeholder="postal_code" autocomplete="off">
+                            <input type="hidden" name="price" value="<%= paymentObj.price%>">
+                            <input type="hidden" name="foodName" value="<%= paymentObj.name%>">
+                            <input type="hidden" name="ownerEmail" value="<%= paymentObj.email%>">
+                            <input type="hidden" name="ownerPhone" value="<%= paymentObj.phone%>">
+                            <p id="msg"></p>
+                            <button class="payBtn">Place Order</button>
+                        </div>
+                    </div>
+                </form>
+                <% } else { %>
+                    <div class="logPayDiv">
+                        <a href="/login">Login to Make Payment</a>
+                    </div>
+                    <% } %>
+        </div>
+    </div>
+</body>
+
+</html>

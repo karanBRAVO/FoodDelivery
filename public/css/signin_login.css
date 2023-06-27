@@ -13,6 +13,30 @@
     box-sizing: border-box;
 }
 
+.msgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    transition: all 0.35s linear;
+}
+
+.msgContainer .innerMsgCont {
+    background-color: bisque;
+    border: 2px solid black;
+    padding: 5px 7px;
+}
+
+.innerMsgCont span {
+    color: black;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
 .mainContainer {
     width: 100%;
     height: 100vh;
@@ -20,6 +44,17 @@
     align-items: center;
     justify-content: center;
     background: url(../img/signIn_login/bg.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login_mainContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/signIn_login/login_bg.avif);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -87,6 +122,26 @@
     border-radius: 3px;
     font-size: 1.2em;
     color: white;
+}
+
+.linkContainer {
+    padding: 2px 5px;
+    margin: 2px 4px;
+}
+
+.linkContainer span {
+    color: black;
+    font-size: 1.1em;
+    font-family: sans-serif;
+}
+
+.linkContainer a {
+    color: #e92d47;
+    font-size: 1.1em;
+    font-weight: 900;
+    font-family: sans-serif;
+    text-decoration: underline;
+    text-transform: capitalize;
 }
 
 .innerContainer .rightContainer {

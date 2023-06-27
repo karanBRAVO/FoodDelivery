@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/admin/admin.ico" type="image/x-icon">
+    <title>Admin - Update Explore</title>
+    <link rel="stylesheet" href="/css/updateExplore.css">
+</head>
+
+<body>
+    <div class="updateExploreContainer">
+        <div class="headingContainer">
+            <h1>Update Explores</h1>
+        </div>
+        <div class="tableContainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                        <th>price($)</th>
+                        <th>status</th>
+                        <th>email</th>
+                        <th>phone</th>
+                        <th>Operations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% exploreData.forEach(function(item) { %>
+                        <tr>
+                            <td>
+                                <%= item._id%>
+                            </td>
+                            <form action="/admin/update-data/<%=item._id%>" method="post">
+                                <td>
+                                    <input type="text" name="updatedName" value="<%= item.name%>"
+                                        placeholder="<%= item.name %>" autocomplete="off" class="inputs">
+                                </td>
+                                <td>
+                                    <textarea name="updatedDesc" placeholder="<%= item.desc %>" id="up_desc" cols="30"
+                                        rows="10" class="inputs"><%= item.desc%></textarea>
+                                </td>
+                                <th>
+                                    <img src="data:image/<%=item.imgSrc.contentType%>;base64,
+                                    <%=item.imgSrc.data.toString('base64')%>" alt="photo"
+                                        style="width: 150px; height: 150px; border-radius: 1px;">
+                                </th>
+                                <td>
+                                    <input type="text" name="updatedPrice" value="<%= item.price%>" id="up_price"
+                                        placeholder="<%= item.price %>" autocomplete="off" class="inputs">
+                                </td>
+                                <td>
+                                    <select name="status" id="status" class="inputs">
+                                        <option value="Available">Available</option>
+                                        <% if (item.status=='Unavailable' ) { %>
+                                            <option value="Unavailable" selected>Unavailable</option>
+                                            <% } else { %>
+                                                <option value="Unavailable">Unavailable</option>
+                                                <% } %>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="email" name="updatedOwnerEmail" value="<%= item.email%>"
+                                        id="ownedEmail" placeholder="<%=item.email%>" autocomplete="off" class="inputs">
+                                </td>
+                                <td>
+                                    <input type="text" name="updatedOwnerPhone" value="<%= item.phone%>" id="ownedPhone"
+                                        placeholder="<%=item.phone%>" autocomplete="off" class="inputs">
+                                </td>
+                                <td>
+                                    <input type="submit" value="Update" class="inpBtns" style="background-color: blue;">
+                                    <a href="/delete-data-from-database/<%= item._id%>" class="inpBtns" style="background-color: red;">Delete</a>
+                                </td>
+                            </form>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

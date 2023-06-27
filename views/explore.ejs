@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./img/brand/favicon.ico" type="image/x-icon" />
+  <title>Bite Route - Explore</title>
+  <link rel="stylesheet" href="./css/explore.css" />
+</head>
+
+<body>
+  <div class="dealsDiv">
+    <div class="dealsContainer">
+      <div class="leftCont">
+        <div class="imgCont">
+          <img src="./img/explore/deals/deal1.avif" alt="dealImg" />
+        </div>
+      </div>
+      <div class="rightCont">
+        <div class="headingCont">
+          <h1>Today's great deal</h1>
+        </div>
+        <div class="descCont">
+          <p>Get pizza and coke in just Rs.199 offer is valid till midnight.</p>
+        </div>
+        <div class="catchyDesc">
+          <span>Order Now!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="optionsDiv">
+    <div class="headingContainer">
+      <a href="/home">
+        <h2>BiteRoute</h2>
+      </a>
+    </div>
+    <div class="searchContainer">
+      <form action="#">
+        <input type="search" name="searchfood" placeholder="your fav meal is..." id="searchFood" />
+        <input type="submit" value="search" />
+      </form>
+    </div>
+    <% if (user.loggedIn) { %>
+      <div class="userLoggedInContainer">
+        <span>
+          <%= user.name%>
+        </span>
+        <a href="/logout">Logout</a>
+      </div>
+      <% } else { %>
+        <div class="signinbtnContainer">
+          <a href="/signin">Sign in</a>
+        </div>
+        <% } %>
+  </div>
+
+  <div class="foodDiv">
+    <% foodData.forEach(function(image) { %>
+      <a href="/payment/<%=image.name%>/<%=image.desc%>/<%=image.price%>/<%=image.phone%>/<%=image.email%>">
+        <div class="cardContainer">
+          <div class="cardinnerContainer">
+            <div class="cardImgCont">
+              <img src="data:image/<%=image.imgSrc.contentType%>;base64,
+              <%=image.imgSrc.data.toString('base64')%>" alt="photo" />
+            </div>
+            <div class="cardNameCont">
+              <h2>
+                <%= image.name %>
+              </h2>
+              <p>
+                <%= image.desc %>
+              </p>
+              <p style="font-size: 0.6em;"><%= image.email%></p>
+              <p style="font-size: 0.6em;"><%= image.phone%></p>
+              <span>$<%= image.price %></span>
+              <p style="font-size: 0.6em;"><%= image.status%></p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <% }) %>
+  </div>
+</body>
+
+</html>

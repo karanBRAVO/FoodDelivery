@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
+/* font-family: 'Rock 3D', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+/* font-family: 'Caprasimo', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.updateExploreContainer {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.updateExploreContainer .headingContainer {
+    padding: 5px 8px;
+}
+
+.headingContainer h1 {
+    font-size: 2em;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Rock 3D', cursive;
+}
+
+.tableContainer {
+    padding: 5px;
+    margin: 5px;
+}
+
+.tableContainer table {
+    background-color: white;
+    overflow: auto;
+    border: 2px solid black;
+    box-shadow: 0 0 8px black;
+}
+
+table tr th {
+    border: 0.73px solid black;
+    padding: 5px;
+    background: black;
+    color: white;
+    font-size: 1em;
+    text-transform: capitalize;
+    font-family: 'Caprasimo', cursive;
+}
+
+table tr td {
+    box-shadow: 0 0 8px black;
+    border: 0.73px solid black;
+    background: transparent;
+    color: black;
+    font-size: 1.1em;
+    text-transform: none;
+    padding: 4px;
+}
+
+.inputs {
+    outline: none;
+    border: 0.75px solid rgb(0, 0, 0);
+    border-radius: 0px;
+    font-size: 0.8em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: black;
+    background-color: transparent;
+    padding: 5px 7px;
+    width: fit-content;
+}
+
+.inpBtns {
+    padding: 5px 6px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.9em;
+    margin: 10px;
+}

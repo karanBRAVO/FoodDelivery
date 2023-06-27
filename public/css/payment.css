@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
+/* font-family: 'Oxygen', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ECF2FF;;
+}
+
+.paymentContainer {
+    width: 100%;
+    background-color: #ECF2FF;
+}
+
+.paymentContainer .paymentHeading {
+    padding: 5px;
+    background-color: #E5D1FA;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paymentHeading h1 {
+    color: black;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 900;
+    font-size: 2.4em;
+    text-transform: uppercase;
+}
+
+.userDataCont {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.17);
+    border-radius: 3px;
+}
+
+.userDataCont h2 {
+    font-size: 1.1em;
+    text-transform: capitalize;
+    font-weight: 800;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.userDataCont p {
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.621);
+    font-weight: 400;
+    font-family: monospace;
+    text-transform: none;
+}
+
+.userDataCont a {
+    font-size: 1em;
+    color: blue;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+.makePaymentContainer {
+    padding: 5px;
+    margin: 1px;
+}
+
+.makePaymentContainer div {
+    padding: 5px 6px;
+    margin: 3px;
+}
+
+.name_heading {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.4em;
+    color: rgba(0, 0, 0, 0.418);
+}
+
+.span {
+    color: black;
+    font-size: 1.1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    padding: 2px 7px;
+    margin: 2px 4px;
+}
+
+.locationFieldsCont {
+    display: flex;
+    flex-direction: column;
+}
+
+.locationFieldsCont input {
+    outline: none;
+    margin: 4px;
+    padding: 5px 8px;
+    border: 2px solid #E3DFFD;
+    border-radius: 4px;
+    background-color: #E3DFFD;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.3em;
+}
+
+.payBtn {
+    padding: 4px 8px;
+    margin: 1px;
+    border: 2px solid #AA77FF;
+    border-radius: 4px;
+    background-color: #AA77FF;
+    color: white;
+    cursor: pointer;
+    font-weight: 900;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-size: 1.5em;
+}
+
+.logPayDiv {
+    padding: 2px;
+    margin: 2px;
+}
+
+.logPayDiv a {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    color: blue;
+    text-transform: none;
+}

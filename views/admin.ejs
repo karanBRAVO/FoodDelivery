@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./img/admin/admin.ico" type="image/x-icon">
+  <title>Admin</title>
+  <link rel="stylesheet" href="./css/admin.css">
+</head>
+
+<body>
+  <div class="admin_mainContainer">
+    <div class="headCont">
+      <h1>Admin Dashboard</h1>
+    </div>
+    <form action="/admin/add-data" method="post" enctype="multipart/form-data">
+      <div class="inputContainer">
+        <label for="imgName">Name</label>
+        <div>
+          <input type="text" name="imgName" id="imgName" placeholder="img_name" autocomplete="off" required />
+        </div>
+      </div>
+      <div class="inputContainer">
+        <label for="imgDesc">Description</label>
+        <div>
+          <textarea name="imgDesc" id="imgDesc" cols="30" rows="10" placeholder="Description..." required></textarea>
+        </div>
+      </div>
+      <div class="inputContainer">
+        <label for="upimg">Image</label>
+        <div>
+          <input type="file" name="upimg" id="upimg" value="" required />
+        </div>
+      </div>
+      <div class="inputContainer">
+        <label for="price">price</label>
+        <div>
+          <input type="text" name="price" id="price" placeholder="$..." autocomplete="off" required />
+        </div>
+      </div>
+      <div class="inputContainer">
+        <label for="status">Availability status</label>
+        <div>
+          <select name="status" id="status"
+            style="border: 2px solid black; padding: 5px; font-family: sans-serif; color: black; background-color: white; margin: 0 5px;">
+            <option value="Available">Available</option>
+            <option value="Unavailable">Unavailable</option>
+          </select>
+        </div>
+      </div>
+      <div class="inputContainer">
+        <button class="uploadBtn">Upload</button>
+      </div>
+    </form>
+
+    <!-- SideCont -->
+    <div class="updateExploreDiv">
+      <a href="/updateExplore">Update Explore</a>
+    </div>
+  </div>
+</body>
+
+</html>

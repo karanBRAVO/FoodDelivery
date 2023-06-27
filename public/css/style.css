@@ -8,6 +8,12 @@
 /* font-family: 'Orbit', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@600&display=swap');
 /* font-family: 'Geologica', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@600&display=swap');
+/* font-family: 'Ysabeau SC', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+/* font-family: 'Bungee Inline', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* font-family: 'Press Start 2P', cursive; */
 
 /* Universal selector */
 * {
@@ -76,12 +82,60 @@ body {
     margin-top: -100px;
 }
 
-.rightContainer .btnContainer {
+.rightContainer .btnsContainer {
     margin: 2px;
-    padding: 4px 5px;
+    padding: 2px 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.btnContainer button {
+.rightContainer .btn_loggedContainer {
+    margin: 2px;
+    padding: 4px 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn_loggedContainer .userContainer {
+    background-color: #0000003e;
+    padding: 5px;
+    border-radius: 4px;
+    margin: 1px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.userContainer p {
+    font-size: 1.3em;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: capitalize;
+    color: black;
+}
+
+.userContainer span {
+    font-size: 1.8em;
+    font-family: 'Bungee Inline', cursive;
+    font-family: 900;
+    text-transform: uppercase;
+    color: black;
+}
+
+.userContainer a {
+    font-size: 1.2em;
+    font-family: 'Ysabeau SC', sans-serif;
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: black;
+}
+
+.topBtns {
     padding: 5px 6px;
     margin: 0 7px;
     font-size: 1.5em;
